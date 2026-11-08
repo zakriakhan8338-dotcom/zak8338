@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS Hardware – Rahman & Sons | Luxury Architectural Hardware & Security Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepCharcoal: '#171A1D',
+                        champagneGold: {
+                            300: '#E2C793',
+                            400: '#D5B47B',
+                            500: '#C6A46A', // Primary Gold Accent
+                            600: '#AA884E',
+                            700: '#8A6C35'
+                        },
+                        warmIvory: '#F5F1E8',
+                        graphiteGrey: '#343A40',
+                        softWhite: '#FFFFFF',
+                        darkSlate: '#111315'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Cormorant Garamond', 'serif'],
+                        sans: ['Poppins', 'Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #171A1D;
+            color: #F5F1E8;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Gold Scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #171A1D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #C6A46A 0%, #343A40 100%);
+            border-radius: 4px;
+        }
+
+        /* Glassmorphism Header */
+        .glass-nav {
+            background: rgba(23, 26, 29, 0.94);
+            backdrop-filter: blur(16px);
+        }
+
+        /* Product Card Shimmer & Zoom Effects */
+        .product-img-box img {
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .ras-card:hover .product-img-box img {
+            transform: scale(1.08);
+        }
+
+        .ras-card {
+            transition: all 0.35s ease;
+        }
+        .ras-card:hover {
+            border-color: rgba(198, 164, 106, 0.6);
+            box-shadow: 0 12px 35px -10px rgba(198, 164, 106, 0.2);
+        }
+
+        /* Metallic Gold Button Gradient */
+        .btn-gold {
+            background: linear-gradient(135deg, #E2C793 0%, #C6A46A 50%, #9E7D3F 100%);
+            color: #171A1D;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            box-shadow: 0 0 22px rgba(198, 164, 106, 0.5);
+            filter: brightness(1.08);
+        }
+
+        .btn-dark {
+            background: #343A40;
+            border: 1px solid rgba(198, 164, 106, 0.4);
+            color: #F5F1E8;
+            transition: all 0.3s ease;
+        }
+        .btn-dark:hover {
+            border-color: #C6A46A;
+            background: #171A1D;
+            color: #C6A46A;
+        }
+
+        /* Gold Shimmer Text */
+        @keyframes goldShimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .gold-shimmer {
+            background: linear-gradient(90deg, #C6A46A 0%, #FFF4DB 50%, #C6A46A 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            animation: goldShimmer 7s infinite linear;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-champagneGold-500 selection:text-deepCharcoal">
+
+    <!-- TOP ANNOUNCEMENT STRIP -->
+    <div class="bg-gradient-to-r from-darkSlate via-deepCharcoal to-darkSlate text-champagneGold-500 border-b border-champagneGold-500/20 text-[11px] py-2 px-4 text-center font-medium tracking-[0.2em] uppercase flex items-center justify-center gap-2">
+        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-champagneGold-500"></i>
+        <span>RAS Hardware Peshawar • Architectural Brass & Heavy Security Hardware • Nationwide Delivery</span>
+        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-champagneGold-500"></i>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-champagneGold-500/20 text-warmIvory transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Mobile Navigation Toggle -->
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-champagneGold-500 hover:text-white transition-colors" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+
+                <!-- Brand Emblem & Logo -->
+                <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-sm bg-gradient-to-br from-champagneGold-400 to-champagneGold-700 p-0.5 shadow-lg flex items-center justify-center group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-deepCharcoal flex items-center justify-center border border-champagneGold-500/30">
+                            <span class="font-serif text-lg font-bold text-champagneGold-400">RAS</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl font-bold tracking-[0.15em] text-white uppercase group-hover:text-champagneGold-400 transition-colors">RAS HARDWARE</span>
+                        <span class="text-[9px] tracking-[0.35em] text-champagneGold-500 font-medium uppercase -mt-1">RAHMAN & SONS • PESHAWAR</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-7 text-xs uppercase tracking-[0.18em] font-medium">
+                    <a href="javascript:void(0)" onclick="navigateTo('home')" class="nav-link text-champagneGold-500 py-1 border-b border-champagneGold-500" data-page="home">Home</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('All')" class="nav-link text-slate-300 hover:text-champagneGold-500 transition-colors py-1" data-page="shop">Catalog</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('Door Locks')" class="nav-link text-slate-300 hover:text-champagneGold-500 transition-colors py-1" data-page="locks">Door Locks</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('Door Handles')" class="nav-link text-slate-300 hover:text-champagneGold-500 transition-colors py-1" data-page="handles">Handles</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('about')" class="nav-link text-slate-300 hover:text-champagneGold-500 transition-colors py-1" data-page="about">About Us</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('location')" class="nav-link text-slate-300 hover:text-champagneGold-500 transition-colors py-1" data-page="location">Showroom</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('contact')" class="nav-link text-slate-300 hover:text-champagneGold-500 transition-colors py-1" data-page="contact">Contact</a>
+                </nav>
+
+                <!-- Search, Wishlist & Cart Actions -->
+                <div class="flex items-center space-x-3 sm:space-x-5">
+                    
+                    <!-- Search Bar -->
+                    <div class="relative hidden sm:block">
+                        <input type="text" id="header-search-input" placeholder="Search locks, handles..." 
+                            class="w-36 lg:w-48 bg-darkSlate border border-champagneGold-500/30 rounded-none py-1.5 pl-8 pr-3 text-xs text-warmIvory placeholder-slate-500 focus:outline-none focus:border-champagneGold-500 focus:w-56 transition-all">
+                        <i data-lucide="search" class="w-3.5 h-3.5 text-champagneGold-500 absolute left-2.5 top-2.5"></i>
+                    </div>
+
+                    <!-- Wishlist Trigger -->
+                    <button id="wishlist-btn" onclick="toggleWishlistDrawer(true)" class="relative p-2 text-slate-300 hover:text-champagneGold-500 transition-colors" title="Saved Items">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                        <span id="wishlist-badge" class="hidden absolute -top-1 -right-1 bg-champagneGold-500 text-deepCharcoal text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- Cart Drawer Trigger -->
+                    <button id="cart-btn" onclick="toggleCartDrawer(true)" class="relative p-2 text-slate-300 hover:text-champagneGold-500 transition-colors flex items-center gap-2" title="Shopping Cart">
+                        <div class="relative">
+                            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                            <span id="cart-badge" class="absolute -top-1 -right-1 bg-champagneGold-500 text-deepCharcoal text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                        </div>
+                        <span id="header-cart-total" class="hidden md:inline text-xs font-semibold text-champagneGold-400">PKR 0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-champagneGold-500/20 bg-deepCharcoal px-6 py-6 space-y-4 text-xs font-medium uppercase tracking-[0.2em]">
+            <input type="text" id="mobile-search-input" placeholder="Search hardware products..." 
+                   class="w-full bg-darkSlate border border-champagneGold-500/30 p-3 text-warmIvory placeholder-slate-500 mb-2">
+            <a href="javascript:void(0)" onclick="navigateTo('home'); toggleMobileMenu()" class="block text-champagneGold-500 py-1">Home</a>
+            <a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('All'); toggleMobileMenu()" class="block text-slate-300 py-1">All Architectural Hardware</a>
+            <a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('Door Locks'); toggleMobileMenu()" class="block text-slate-300 py-1">Mortise & Rim Door Locks</a>
+            <a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('Door Handles'); toggleMobileMenu()" class="block text-slate-300 py-1">Luxury Door Handles</a>
+            <a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('Hydraulic Closers'); toggleMobileMenu()" class="block text-slate-300 py-1">Hydraulic Door Closers</a>
+            <a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('Triple Rods'); toggleMobileMenu()" class="block text-slate-300 py-1">Triple Rods & Gate Locks</a>
+            <a href="javascript:void(0)" onclick="navigateTo('about'); toggleMobileMenu()" class="block text-slate-300 py-1">Our Heritage & Craft</a>
+            <a href="javascript:void(0)" onclick="navigateTo('location'); toggleMobileMenu()" class="block text-slate-300 py-1">Peshawar Showroom</a>
+            <a href="javascript:void(0)" onclick="navigateTo('contact'); toggleMobileMenu()" class="block text-slate-300 py-1">Wholesale Contact</a>
+        </div>
+    </header>
+
+    <!-- SPA VIEW CONTAINERS -->
+    <main class="flex-grow">
+
+        <!-- VIEW 1: HOME PAGE -->
+        <div id="view-home" class="view-container animate-fade-in">
+            
+            <!-- Cinematic Luxury Hero Section -->
+            <section class="relative bg-deepCharcoal text-warmIvory min-h-[92vh] flex items-center overflow-hidden border-b border-champagneGold-500/20">
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=1920" 
+                         alt="Luxury Architectural Door Hardware Lighting" 
+                         class="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-r from-deepCharcoal via-deepCharcoal/90 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-deepCharcoal via-transparent to-transparent"></div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24">
+                    <div class="max-w-2xl space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-champagneGold-500/10 border border-champagneGold-500/30 text-champagneGold-400 text-xs font-semibold uppercase tracking-[0.25em]">
+                            <i data-lucide="award" class="w-3.5 h-3.5 text-champagneGold-500"></i> Premium European Hardware Standards
+                        </div>
+                        
+                        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08]">
+                            SECURITY MEETS <br>
+                            <span class="gold-shimmer">ELEGANCE.</span>
+                        </h1>
+                        
+                        <p class="text-slate-300 text-base sm:text-lg font-light leading-relaxed max-w-xl">
+                            Premium Architectural Hardware. Exceptional Craftsmanship. Lasting Protection. Specializing in solid brass mortise locks, brushed champagne handles, precision cylinders, and heavy security rods.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                            <button onclick="navigateTo('shop')" class="btn-gold font-bold px-8 py-4 uppercase text-xs tracking-[0.22em] flex items-center justify-center gap-2 shadow-2xl">
+                                Explore Collection
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                            <button onclick="navigateTo('contact')" class="btn-dark px-8 py-4 uppercase text-xs tracking-[0.22em] font-semibold text-center">
+                                Contact Us
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Value Props Strip -->
+            <section class="bg-darkSlate border-b border-champagneGold-500/20 py-10 text-warmIvory">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div class="space-y-1.5 border-r border-champagneGold-500/10 last:border-0 pr-4">
+                            <i data-lucide="shield" class="w-6 h-6 text-champagneGold-500 mx-auto mb-2"></i>
+                            <h3 class="font-serif text-lg font-bold text-white">SUS304 & Solid Brass</h3>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-widest">Corrosion Resistant</p>
+                        </div>
+                        <div class="space-y-1.5 border-r border-champagneGold-500/10 last:border-0 pr-4">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-champagneGold-500 mx-auto mb-2"></i>
+                            <h3 class="font-serif text-lg font-bold text-white">500,000 Cycles</h3>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-widest">Durability Tested</p>
+                        </div>
+                        <div class="space-y-1.5 border-r border-champagneGold-500/10 last:border-0 pr-4">
+                            <i data-lucide="truck" class="w-6 h-6 text-champagneGold-500 mx-auto mb-2"></i>
+                            <h3 class="font-serif text-lg font-bold text-white">Wholesale & Retail</h3>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-widest">Peshawar & Nationwide</p>
+                        </div>
+                        <div class="space-y-1.5">
+                            <i data-lucide="key-round" class="w-6 h-6 text-champagneGold-500 mx-auto mb-2"></i>
+                            <h3 class="font-serif text-lg font-bold text-white">Master Key Systems</h3>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-widest">Custom Security</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hardware Collections Showcase -->
+            <section class="py-24 bg-deepCharcoal">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-xl mx-auto mb-16">
+                        <span class="text-champagneGold-500 font-semibold text-xs uppercase tracking-[0.3em]">Hardware Categories</span>
+                        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2">Architectural Collections</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Collection Card 1 -->
+                        <div class="relative h-[25rem] group overflow-hidden border border-champagneGold-500/30 shadow-2xl cursor-pointer" onclick="navigateTo('shop'); filterCategory('Door Locks')">
+                            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=800" 
+                                 alt="Premium Brass Mortise Locks" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-deepCharcoal via-deepCharcoal/60 to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 right-8 text-warmIvory">
+                                <span class="text-champagneGold-400 text-xs font-semibold tracking-widest uppercase">Precision Security</span>
+                                <h3 class="font-serif text-3xl font-bold text-white mt-1">Mortise & Rim Locks</h3>
+                                <p class="text-xs text-slate-300 mt-2 mb-4">Solid brass mechanisms, anti-pick cylinders, heavy deadlock bolts.</p>
+                                <span class="inline-flex items-center gap-2 text-xs font-bold text-champagneGold-400 uppercase tracking-widest group-hover:underline">
+                                    Explore Locks <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Collection Card 2 -->
+                        <div class="relative h-[25rem] group overflow-hidden border border-champagneGold-500/30 shadow-2xl cursor-pointer" onclick="navigateTo('shop'); filterCategory('Door Handles')">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800" 
+                                 alt="Modern Brushed Gold Door Handles" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-deepCharcoal via-deepCharcoal/60 to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 right-8 text-warmIvory">
+                                <span class="text-champagneGold-400 text-xs font-semibold tracking-widest uppercase">Ergonomic Design</span>
+                                <h3 class="font-serif text-3xl font-bold text-white mt-1">Luxury Lever Handles</h3>
+                                <p class="text-xs text-slate-300 mt-2 mb-4">Brushed champagne gold, matte black, and satin nickel finishes.</p>
+                                <span class="inline-flex items-center gap-2 text-xs font-bold text-champagneGold-400 uppercase tracking-widest group-hover:underline">
+                                    Explore Handles <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Collection Card 3 -->
+                        <div class="relative h-[25rem] group overflow-hidden border border-champagneGold-500/30 shadow-2xl cursor-pointer" onclick="navigateTo('shop'); filterCategory('Triple Rods')">
+                            <img src="https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&q=80&w=800" 
+                                 alt="Heavy Duty Triple Rod Gate Locks" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-deepCharcoal via-deepCharcoal/60 to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 right-8 text-warmIvory">
+                                <span class="text-champagneGold-400 text-xs font-semibold tracking-widest uppercase">Main Gate Protection</span>
+                                <h3 class="font-serif text-3xl font-bold text-white mt-1">Triple Rod Mechanisms</h3>
+                                <p class="text-xs text-slate-300 mt-2 mb-4">Maximum perimeter security with multi-point steel locking rods.</p>
+                                <span class="inline-flex items-center gap-2 text-xs font-bold text-champagneGold-400 uppercase tracking-widest group-hover:underline">
+                                    Explore Gate Security <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Products Grid Section -->
+            <section class="py-20 bg-darkSlate border-y border-champagneGold-500/20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-14 gap-4">
+                        <div>
+                            <span class="text-champagneGold-500 font-semibold text-xs uppercase tracking-[0.3em]">Flagship Hardware</span>
+                            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">Featured RAS Hardware Products</h2>
+                        </div>
+                        <button onclick="navigateTo('shop')" class="text-xs font-bold uppercase tracking-widest text-champagneGold-400 hover:text-white flex items-center gap-2 border-b border-champagneGold-500 pb-1 transition-colors">
+                            View Full Catalog <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                    <div id="home-featured-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Injected dynamically via JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Full-Width Cinematic Banner: "Every Detail Matters" -->
+            <section class="relative bg-deepCharcoal py-28 border-b border-champagneGold-500/20 overflow-hidden text-warmIvory">
+                <div class="absolute inset-0 z-0 opacity-40">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1600" 
+                         alt="Architectural Luxury Wooden Door with Metallic Lock" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-deepCharcoal via-deepCharcoal/90 to-deepCharcoal"></div>
+                </div>
+                
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+                    <span class="text-champagneGold-500 text-xs font-bold uppercase tracking-[0.35em]">Uncompromising Quality</span>
+                    <h2 class="font-serif text-4xl sm:text-6xl font-bold text-white">EVERY DETAIL MATTERS.</h2>
+                    <p class="max-w-2xl mx-auto text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        From high-density solid brass cylinders forged to withstand extreme wear, to hydraulic door closers engineered for whisper-silent operation in commercial and residential luxury estates.
+                    </p>
+                    <div class="pt-4 flex justify-center gap-4">
+                        <button onclick="navigateTo('shop')" class="btn-gold font-bold text-xs uppercase tracking-widest px-8 py-4 shadow-xl">
+                            Browse All Products
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Story Section -->
+            <section class="py-24 bg-deepCharcoal">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6">
+                            <span class="text-champagneGold-500 font-semibold text-xs uppercase tracking-[0.3em]">Heritage & Reliability</span>
+                            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white">Built on Trust. Designed for Excellence.</h2>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                                RAS Hardware – Rahman & Sons has established a legacy of providing high-caliber security systems and architectural hardware in Peshawar, Pakistan. Inspired by European architectural design, every product combines heavy-grade metallurgy with refined aesthetics.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-6 pt-2 text-xs">
+                                <div class="border-l-2 border-champagneGold-500 pl-4 space-y-1">
+                                    <h4 class="font-bold text-white uppercase tracking-wider">Premium Metallurgy</h4>
+                                    <p class="text-slate-400">High-grade solid brass, SUS304 stainless steel, and zinc alloys.</p>
+                                </div>
+                                <div class="border-l-2 border-champagneGold-500 pl-4 space-y-1">
+                                    <h4 class="font-bold text-white uppercase tracking-wider">Wholesale & Projects</h4>
+                                    <p class="text-slate-400">Supplying residential villas, commercial plazas, & hardware retailers.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative bg-graphiteGrey p-3 border border-champagneGold-500/30 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" 
+                                 alt="RAS Hardware Craftsmanship" 
+                                 class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- VIEW 2: FULL SHOP CATALOG PAGE -->
+        <div id="view-shop" class="view-container hidden animate-fade-in py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Catalog Header Bar -->
+                <div class="border-b border-champagneGold-500/20 pb-8 mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <span class="text-champagneGold-500 text-xs font-bold uppercase tracking-[0.25em]" id="catalog-category-title">Full Hardware Catalog</span>
+                        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-1">RAS Architectural Hardware</h1>
+                    </div>
+
+                    <!-- Category Pills & Sorting -->
+                    <div class="flex flex-wrap items-center gap-3">
+                        <div class="flex flex-wrap items-center gap-1 bg-darkSlate border border-champagneGold-500/30 p-1">
+                            <button onclick="filterCategory('All')" class="shop-filter-btn active-filter px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors" data-cat="All">All</button>
+                            <button onclick="filterCategory('Door Locks')" class="shop-filter-btn px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors" data-cat="Door Locks">Door Locks</button>
+                            <button onclick="filterCategory('Door Handles')" class="shop-filter-btn px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors" data-cat="Door Handles">Handles</button>
+                            <button onclick="filterCategory('Door Stoppers')" class="shop-filter-btn px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors" data-cat="Door Stoppers">Stoppers</button>
+                            <button onclick="filterCategory('Hydraulic Closers')" class="shop-filter-btn px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors" data-cat="Hydraulic Closers">Closers</button>
+                            <button onclick="filterCategory('Brass Keys & Cylinders')" class="shop-filter-btn px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors" data-cat="Brass Keys & Cylinders">Cylinders</button>
+                            <button onclick="filterCategory('Triple Rods')" class="shop-filter-btn px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors" data-cat="Triple Rods">Triple Rods</button>
+                        </div>
+
+                        <select id="shop-sort" onchange="renderShopGrid()" class="bg-darkSlate border border-champagneGold-500/30 px-4 py-2 text-xs font-medium text-champagneGold-400 focus:outline-none cursor-pointer">
+                            <option value="featured">Sort: Featured</option>
+                            <option value="low-high">Price: Low to High</option>
+                            <option value="high-low">Price: High to Low</option>
+                            <option value="rating">Highest Rating</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Main Grid -->
+                <div id="main-shop-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Dynamic Injected Cards -->
+                </div>
+
+                <!-- Empty State -->
+                <div id="shop-empty-state" class="hidden text-center py-24">
+                    <i data-lucide="shield-alert" class="w-12 h-12 text-champagneGold-500/40 mx-auto mb-4"></i>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-2">No hardware products match criteria</h3>
+                    <p class="text-xs text-slate-400 mb-6">Try searching for another model or category filter.</p>
+                    <button onclick="filterCategory('All')" class="btn-gold text-deepCharcoal text-xs font-bold uppercase tracking-widest px-6 py-3">Show All Products</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- VIEW 3: PRODUCT DETAIL VIEW -->
+        <div id="view-product-detail" class="view-container hidden animate-fade-in py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <button onclick="navigateTo('shop')" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-champagneGold-400 mb-8 transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> Back To Catalog
+                </button>
+
+                <div id="product-detail-container">
+                    <!-- Injected dynamically when product is selected -->
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 4: ABOUT US & HERITAGE PAGE -->
+        <div id="view-about" class="view-container hidden animate-fade-in py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+                <div class="text-center max-w-3xl mx-auto space-y-4">
+                    <span class="text-champagneGold-500 text-xs font-semibold uppercase tracking-[0.3em]">Company Heritage</span>
+                    <h1 class="font-serif text-4xl sm:text-6xl font-bold text-white">RAS Hardware – Rahman & Sons</h1>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        For years, Rahman & Sons has been a trusted symbol of strength, durability, and luxury hardware design in Peshawar. We engineer and supply security systems built for longevity.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-darkSlate p-8 border border-champagneGold-500/30 space-y-4 text-center">
+                        <div class="w-12 h-12 rounded-full bg-champagneGold-500/10 text-champagneGold-400 flex items-center justify-center mx-auto border border-champagneGold-500/30">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white">Uncompromising Security</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Heavy anti-pick pins, reinforced steel bolts, and triple rod lock bars designed to protect residential homes and commercial establishments.
+                        </p>
+                    </div>
+
+                    <div class="bg-darkSlate p-8 border border-champagneGold-500/30 space-y-4 text-center">
+                        <div class="w-12 h-12 rounded-full bg-champagneGold-500/10 text-champagneGold-400 flex items-center justify-center mx-auto border border-champagneGold-500/30">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white">European Aesthetic</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Minimalist lines, champagne gold electroplated coatings, and matte black PVD finishes crafted for modern interior architecture.
+                        </p>
+                    </div>
+
+                    <div class="bg-darkSlate p-8 border border-champagneGold-500/30 space-y-4 text-center">
+                        <div class="w-12 h-12 rounded-full bg-champagneGold-500/10 text-champagneGold-400 flex items-center justify-center mx-auto border border-champagneGold-500/30">
+                            <i data-lucide="building" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white">Wholesale Supply</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Direct bulk distribution to contractors, interior designers, and hardware retailers throughout Khyber Pakhtunkhwa & Pakistan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 5: LOCATION & SHOWROOM PAGE -->
+        <div id="view-location" class="view-container hidden animate-fade-in py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <span class="text-champagneGold-500 text-xs font-semibold uppercase tracking-[0.3em]">Visit Our Showroom</span>
+                    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white">Peshawar Store Location</h1>
+                    <p class="text-xs sm:text-sm text-slate-300">Experience our complete collection of brass mortise locks, handles, and door closers in person.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    <!-- Showroom Details Card -->
+                    <div class="bg-darkSlate p-8 border border-champagneGold-500/30 space-y-6">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-white">RAS Hardware</h3>
+                            <p class="text-xs text-champagneGold-400 font-semibold uppercase tracking-wider">Rahman & Sons</p>
+                        </div>
+
+                        <div class="space-y-4 text-xs text-slate-300">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-champagneGold-500 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-white block uppercase">Showroom Address:</strong>
+                                    Rati Bazar, Peshawar, Khyber Pakhtunkhwa, Pakistan.
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="clock" class="w-5 h-5 text-champagneGold-500 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-white block uppercase">Business Hours:</strong>
+                                    Monday - Saturday: 09:00 AM – 08:00 PM<br>
+                                    Sunday: Closed
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="phone" class="w-5 h-5 text-champagneGold-500 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-white block uppercase">Phone & Wholesale Contact:</strong>
+                                    +92 300 0000000 / +92 91 1234567
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Rati+Bazar+Peshawar+Pakistan" target="_blank" rel="noopener" class="btn-gold w-full text-deepCharcoal font-bold text-xs uppercase tracking-widest py-3.5 flex items-center justify-center gap-2 shadow-lg">
+                            <i data-lucide="navigation" class="w-4 h-4"></i> Get Showroom Directions
+                        </a>
+                    </div>
+
+                    <!-- Interactive Google Map Frame -->
+                    <div class="lg:col-span-2 bg-darkSlate border border-champagneGold-500/30 overflow-hidden h-[420px] shadow-2xl relative">
+                        <iframe title="RAS Hardware Location Map" 
+                                class="w-full h-full border-0 grayscale opacity-85 hover:grayscale-0 transition-all duration-500" 
+                                src="https://maps.google.com/maps?q=Rati%20Bazar%20Peshawar%20Pakistan&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 6: CONTACT & WHOLESALE INQUIRY PAGE -->
+        <div id="view-contact" class="view-container hidden animate-fade-in py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <span class="text-champagneGold-500 text-xs font-semibold uppercase tracking-[0.3em]">Client Consultation</span>
+                            <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-1">Get In Touch With RAS</h1>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                                Are you an architect, interior designer, house builder, or hardware retailer seeking bulk quotations or custom master key cylinder systems? Reach out today.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <a href="https://wa.me/923000000000?text=Hello%20RAS%20Hardware,%20I%20would%20like%20to%20inquire%20about%20bulk%20pricing." 
+                               target="_blank" 
+                               class="flex items-center gap-4 p-4 bg-darkSlate border border-champagneGold-500/30 hover:border-champagneGold-400 transition-colors">
+                                <div class="p-3 bg-champagneGold-500/10 text-champagneGold-400">
+                                    <i data-lucide="message-square" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-xs uppercase tracking-wider">Instant WhatsApp Wholesale Inquiry</h4>
+                                    <p class="text-xs text-slate-400">+92 300 0000000</p>
+                                </div>
+                            </a>
+
+                            <div class="flex items-center gap-4 p-4 bg-darkSlate border border-champagneGold-500/30">
+                                <div class="p-3 bg-champagneGold-500/10 text-champagneGold-400">
+                                    <i data-lucide="mail" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-xs uppercase tracking-wider">Direct Email Address</h4>
+                                    <p class="text-xs text-slate-400">info@rashardware.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-darkSlate p-8 sm:p-10 border border-champagneGold-500/30 shadow-2xl">
+                        <h3 class="font-serif text-2xl font-bold text-white mb-6">Send Wholesale Request</h3>
+                        <form onsubmit="handleContactSubmit(event)" class="space-y-4 text-xs">
+                            <div>
+                                <label class="block font-semibold uppercase text-champagneGold-400 mb-1 tracking-wider">Your Full Name</label>
+                                <input type="text" required placeholder="e.g. Tariq Khan" class="w-full bg-deepCharcoal border border-champagneGold-500/30 p-3 text-white outline-none focus:border-champagneGold-500">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-semibold uppercase text-champagneGold-400 mb-1 tracking-wider">Phone / WhatsApp</label>
+                                    <input type="tel" required placeholder="+92 300 1234567" class="w-full bg-deepCharcoal border border-champagneGold-500/30 p-3 text-white outline-none focus:border-champagneGold-500">
+                                </div>
+                                <div>
+                                    <label class="block font-semibold uppercase text-champagneGold-400 mb-1 tracking-wider">Inquiry Category</label>
+                                    <select class="w-full bg-deepCharcoal border border-champagneGold-500/30 p-3 text-white outline-none focus:border-champagneGold-500">
+                                        <option>Retail Purchase</option>
+                                        <option>Bulk Wholesale Quotation</option>
+                                        <option>Architectural Villa Project</option>
+                                        <option>Master Key System Consultation</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block font-semibold uppercase text-champagneGold-400 mb-1 tracking-wider">Project / Inquiry Details</label>
+                                <textarea rows="4" required placeholder="Detail your hardware quantities or specifications..." class="w-full bg-deepCharcoal border border-champagneGold-500/30 p-3 text-white outline-none focus:border-champagneGold-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-gold font-bold text-xs uppercase tracking-widest py-4 shadow-xl">
+                                Submit Inquiry Message
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-deepCharcoal text-white border-t border-champagneGold-500/20 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-champagneGold-500/10">
+                
+                <!-- Brand Summary -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-sm bg-champagneGold-500 p-0.5 flex items-center justify-center">
+                            <div class="w-full h-full bg-deepCharcoal flex items-center justify-center">
+                                <span class="font-serif text-xs font-bold text-champagneGold-400">RAS</span>
+                            </div>
+                        </div>
+                        <span class="font-serif text-xl font-bold tracking-widest text-white">RAS HARDWARE</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+                        Rahman & Sons — Delivering premium architectural hardware, luxury brass mortise locks, door handles, and heavy security accessories in Peshawar, Pakistan.
+                    </p>
+                    <p class="text-xs text-champagneGold-400 font-medium">
+                        Showroom: Rati Bazar, Peshawar, Pakistan.
+                    </p>
+                </div>
+
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-champagneGold-400 mb-4">Product Lines</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('Door Locks')" class="hover:text-champagneGold-400 transition-colors">Brass Mortise Locks</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('Door Handles')" class="hover:text-champagneGold-400 transition-colors">Architectural Handles</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('Hydraulic Closers')" class="hover:text-champagneGold-400 transition-colors">Hydraulic Door Closers</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('shop'); filterCategory('Triple Rods')" class="hover:text-champagneGold-400 transition-colors">Main Gate Triple Rods</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-champagneGold-400 mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="javascript:void(0)" onclick="navigateTo('home')" class="hover:text-champagneGold-400 transition-colors">Home Page</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('about')" class="hover:text-champagneGold-400 transition-colors">Our Brand Heritage</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('location')" class="hover:text-champagneGold-400 transition-colors">Peshawar Store Map</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('contact')" class="hover:text-champagneGold-400 transition-colors">Wholesale Quotation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 Newsletter -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-champagneGold-400 mb-4">Trade Catalog Updates</h4>
+                    <p class="text-xs text-slate-400 mb-3">Subscribe for bulk inventory announcements and new arrivals.</p>
+                    <form onsubmit="handleNewsletter(event)" class="space-y-2">
+                        <input type="email" required placeholder="Enter email address" class="w-full bg-darkSlate border border-champagneGold-500/30 p-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-champagneGold-500">
+                        <button type="submit" class="w-full btn-gold text-deepCharcoal text-xs font-bold uppercase tracking-widest py-2.5">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
+                <p>&copy; 2026 RAS Hardware – Rahman & Sons. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="javascript:void(0)" onclick="navigateTo('location')" class="hover:text-champagneGold-400">Rati Bazar, Peshawar</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('contact')" class="hover:text-champagneGold-400">Wholesale Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART SLIDE-OUT DRAWER -->
+    <div id="cart-drawer-overlay" class="fixed inset-0 bg-deepCharcoal/80 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300">
+        <div id="cart-drawer" class="fixed right-0 top-0 bottom-0 w-full max-w-md bg-darkSlate shadow-2xl flex flex-col translate-x-full transition-transform duration-300 border-l border-champagneGold-500/30">
+            
+            <div class="p-6 bg-deepCharcoal text-white flex items-center justify-between border-b border-champagneGold-500/20">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shopping-bag" class="w-5 h-5 text-champagneGold-400"></i>
+                    <h3 class="font-serif text-xl font-bold text-white">Hardware Shopping Cart</h3>
+                    <span id="cart-drawer-count" class="bg-champagneGold-500 text-deepCharcoal text-xs font-bold px-2 py-0.5">0</span>
+                </div>
+                <button onclick="toggleCartDrawer(false)" class="text-slate-400 hover:text-white p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div id="cart-drawer-items" class="flex-grow overflow-y-auto p-6 space-y-4">
+                <!-- Cart Items Injected -->
+            </div>
+
+            <div class="p-6 bg-deepCharcoal border-t border-champagneGold-500/20 space-y-4">
+                <div class="space-y-2 text-xs text-slate-300">
+                    <div class="flex justify-between">
+                        <span>Items Subtotal</span>
+                        <span id="cart-drawer-subtotal" class="font-bold text-white">PKR 0</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Peshawar Showroom Shipping</span>
+                        <span class="text-champagneGold-400 font-bold uppercase">FREE</span>
+                    </div>
+                    <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-champagneGold-500/20">
+                        <span>Total Payable</span>
+                        <span id="cart-drawer-total" class="text-champagneGold-400">PKR 0</span>
+                    </div>
+                </div>
+
+                <button onclick="openCheckoutModal()" class="w-full btn-gold text-deepCharcoal font-bold text-xs uppercase tracking-widest py-4 shadow-xl flex items-center justify-center gap-2">
+                    Proceed To Checkout <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- WISHLIST DRAWER -->
+    <div id="wishlist-drawer-overlay" class="fixed inset-0 bg-deepCharcoal/80 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300">
+        <div id="wishlist-drawer" class="fixed right-0 top-0 bottom-0 w-full max-w-md bg-darkSlate shadow-2xl flex flex-col translate-x-full transition-transform duration-300 border-l border-champagneGold-500/30">
+            
+            <div class="p-6 bg-deepCharcoal text-white flex items-center justify-between border-b border-champagneGold-500/20">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="heart" class="w-5 h-5 text-champagneGold-400"></i>
+                    <h3 class="font-serif text-xl font-bold text-white">Saved Hardware</h3>
+                    <span id="wishlist-drawer-count" class="bg-champagneGold-500 text-deepCharcoal text-xs font-bold px-2 py-0.5">0</span>
+                </div>
+                <button onclick="toggleWishlistDrawer(false)" class="text-slate-400 hover:text-white p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div id="wishlist-drawer-items" class="flex-grow overflow-y-auto p-6 space-y-4">
+                <!-- Wishlist items injected -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- QUICK VIEW MODAL -->
+    <div id="quick-view-modal" class="fixed inset-0 bg-deepCharcoal/85 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+        <div class="bg-darkSlate max-w-4xl w-full border border-champagneGold-500/40 shadow-2xl overflow-hidden relative scale-95 transition-transform duration-300" id="quick-view-content">
+            <button onclick="closeQuickViewModal()" class="absolute top-4 right-4 z-10 p-2 text-slate-400 hover:text-white bg-deepCharcoal">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="quick-view-body" class="grid grid-cols-1 md:grid-cols-2">
+                <!-- Dynamic Quick View Specs -->
+            </div>
+        </div>
+    </div>
+
+    <!-- STEP-BY-STEP CHECKOUT MODAL -->
+    <div id="checkout-modal" class="fixed inset-0 bg-deepCharcoal/90 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+        <div class="bg-darkSlate max-w-xl w-full border border-champagneGold-500/40 p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl">
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="mb-6 border-b border-champagneGold-500/20 pb-4">
+                <span class="text-champagneGold-400 text-[10px] font-bold uppercase tracking-[0.25em] block">Secure RAS Order</span>
+                <h3 class="font-serif text-3xl font-bold text-white">Complete Purchase</h3>
+            </div>
+
+            <form onsubmit="handleCheckoutSubmit(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-bold text-champagneGold-400 uppercase mb-1 tracking-wider">Full Client Name</label>
+                    <input type="text" required placeholder="e.g. Haji Muhammad Ali" class="w-full bg-deepCharcoal border border-champagneGold-500/30 p-3 text-white outline-none focus:border-champagneGold-500">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-champagneGold-400 uppercase mb-1 tracking-wider">Email Address</label>
+                        <input type="email" required placeholder="ali@example.com" class="w-full bg-deepCharcoal border border-champagneGold-500/30 p-3 text-white outline-none focus:border-champagneGold-500">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-champagneGold-400 uppercase mb-1 tracking-wider">Phone / WhatsApp</label>
+                        <input type="tel" required placeholder="+92 300 0000000" class="w-full bg-deepCharcoal border border-champagneGold-500/30 p-3 text-white outline-none focus:border-champagneGold-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-champagneGold-400 uppercase mb-1 tracking-wider">Delivery Address</label>
+                    <input type="text" required placeholder="House #, Street, University Road, Peshawar" class="w-full bg-deepCharcoal border border-champagneGold-500/30 p-3 text-white outline-none focus:border-champagneGold-500">
+                </div>
+
+                <div>
+                    <label class="block font-bold text-champagneGold-400 uppercase mb-2 tracking-wider">Payment / Procurement Option</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <label class="border border-champagneGold-500/30 p-3 flex items-center gap-2 cursor-pointer hover:border-champagneGold-500 bg-deepCharcoal">
+                            <input type="radio" name="payment_method" value="cod" checked class="accent-champagneGold-500">
+                            <span class="font-bold text-white text-[11px]">Cash on Delivery</span>
+                        </label>
+                        <label class="border border-champagneGold-500/30 p-3 flex items-center gap-2 cursor-pointer hover:border-champagneGold-500 bg-deepCharcoal">
+                            <input type="radio" name="payment_method" value="bank" class="accent-champagneGold-500">
+                            <span class="font-bold text-white text-[11px]">Bank Transfer</span>
+                        </label>
+                        <label class="border border-champagneGold-500/30 p-3 flex items-center gap-2 cursor-pointer hover:border-champagneGold-500 bg-deepCharcoal">
+                            <input type="radio" name="payment_method" value="wholesale" class="accent-champagneGold-500">
+                            <span class="font-bold text-white text-[11px]">Wholesale Invoice</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-champagneGold-500/20 flex items-center justify-between">
+                    <div>
+                        <span class="text-slate-400 block">Total Investment:</span>
+                        <span id="checkout-final-total" class="font-bold text-xl text-champagneGold-400">PKR 0</span>
+                    </div>
+                    <button type="submit" class="btn-gold text-deepCharcoal font-bold text-xs uppercase tracking-widest px-8 py-4 shadow-xl">
+                        Confirm Purchase Order
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/923000000000?text=Hello%20RAS%20Hardware%20Peshawar,%20I%20would%20like%20to%20inquire%20about%20your%20products." 
+       target="_blank" 
+       rel="noopener"
+       class="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center group transition-all duration-300 hover:scale-110 border border-emerald-400/30" 
+       title="WhatsApp Hardware Concierge">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap text-xs font-semibold px-0 group-hover:px-2 uppercase tracking-wider">WhatsApp Inquiry</span>
+    </a>
+
+    <!-- TOAST CONTAINER -->
+    <div id="toast-container" class="fixed bottom-6 left-6 z-50 flex flex-col space-y-2 pointer-events-none"></div>
+
+    <!-- JAVASCRIPT LOGIC ENGINE -->
+    <script>
+        // HARDWARE PRODUCT DATASET
+        const products = [
+            {
+                id: 1,
+                model: "RAS-L801",
+                name: "Royal Brass Mortise Lock Set",
+                category: "Door Locks",
+                tag: "Bestseller",
+                price: 14500,
+                rating: 5.0,
+                material: "57% Solid Forged Brass",
+                finish: "Brushed Champagne Gold & Satin",
+                durability: "500,000 Key Cycles Tested",
+                image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=800",
+                description: "Heavy-duty solid brass mortise lock mechanism complete with anti-pick computer dimple key cylinder and reinforced latch bolt."
+            },
+            {
+                id: 2,
+                model: "RAS-H204",
+                name: "Brushed Gold Architectural Handle Set",
+                category: "Door Handles",
+                tag: "Luxury Finish",
+                price: 8200,
+                rating: 4.9,
+                material: "High-Density Zinc Alloy & Brass Base",
+                finish: "Electroplated Champagne Gold PVD",
+                durability: "Corrosion Free Salt-Spray Rated",
+                image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800",
+                description: "Minimalist European curved lever handle set designed for interior luxury doors and master bedroom suites."
+            },
+            {
+                id: 3,
+                model: "RAS-C900",
+                name: "Heavy Duty Hydraulic Overhead Door Closer",
+                category: "Hydraulic Closers",
+                tag: "Commercial Grade",
+                price: 6800,
+                rating: 4.8,
+                material: "Cast Aluminum Body & Steel Arm",
+                finish: "Graphite Silver Anodized",
+                durability: "Adjustable Closing & Latching Speed",
+                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800",
+                description: "Engineered hydraulic door closer for smooth, controlled automatic closing of heavy wooden and steel entry doors."
+            },
+            {
+                id: 4,
+                model: "RAS-S102",
+                name: "Solid Brass Magnetic Floor Door Stopper",
+                category: "Door Stoppers",
+                tag: "Essential",
+                price: 2400,
+                rating: 4.9,
+                material: "100% Solid Machined Brass",
+                finish: "Champagne Gold Satin",
+                durability: "Neodymium High-Holding Magnet",
+                image: "https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&q=80&w=800",
+                description: "Precision-machined floor magnetic stopper preventing wall damage with high-strength magnetic hold."
+            },
+            {
+                id: 5,
+                model: "RAS-K500",
+                name: "High-Security Precision Brass Cylinder & Keys",
+                category: "Brass Keys & Cylinders",
+                tag: "Anti-Pick",
+                price: 3900,
+                rating: 5.0,
+                material: "Solid Brass Euro-Profile Cylinder",
+                finish: "Dual Finish Gold / Nickel",
+                durability: "Anti-Drill & Anti-Snap Pins",
+                image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=800",
+                description: "High-security euro profile cylinder with 5 dimple computerized brass keys for master key systems."
+            },
+            {
+                id: 6,
+                model: "RAS-TR700",
+                name: "Heavy Triple Rod Security Gate Lock Mechanism",
+                category: "Triple Rods",
+                tag: "Maximum Gate Security",
+                price: 11200,
+                rating: 4.9,
+                material: "Forged Hardened Steel Rods & Brass Lock",
+                finish: "Powder Coated Black & Gold",
+                durability: "High Impact & Tamper Resistant",
+                image: "https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&q=80&w=800",
+                description: "Multi-point perimeter triple rod locking system for main entrance steel and wooden security gates."
+            },
+            {
+                id: 7,
+                model: "RAS-L905",
+                name: "Matte Black Dual-Tone Lever Lock",
+                category: "Door Locks",
+                tag: "Modern Design",
+                price: 12800,
+                rating: 4.8,
+                material: "SUS304 Stainless Steel Core",
+                finish: "Matte Black & Gold Accent",
+                durability: "Scratch Proof PVD Coating",
+                image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=800",
+                description: "Contemporary dual-tone door lock combining deep matte black with champagne gold architectural accents."
+            },
+            {
+                id: 8,
+                model: "RAS-H100",
+                name: "Concealed Stainless Steel Hinge & Stopper Kit",
+                category: "Door Stoppers",
+                tag: "Heavy Load",
+                price: 4500,
+                rating: 4.7,
+                material: "Grade 304 Stainless Steel",
+                finish: "Brushed Satin Gold",
+                durability: "Ball Bearing Smooth Pivot",
+                image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800",
+                description: "Heavy-duty stainless steel ball bearing hinges paired with integrated door stop bumper."
+            }
+        ];
+
+        // STATE ENGINE
+        let cart = [];
+        let wishlist = new Set();
+        let currentActiveCategory = 'All';
+
+        window.onload = () => {
+            renderFeaturedHomeProducts();
+            renderShopGrid();
+            setupSearchListeners();
+            lucide.createIcons();
+        };
+
+        // NAVIGATION ENGINE
+        function navigateTo(pageId) {
+            document.querySelectorAll('.view-container').forEach(view => view.classList.add('hidden'));
+            
+            const targetView = document.getElementById(`view-${pageId}`);
+            if (targetView) {
+                targetView.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.dataset.page === pageId) {
+                    link.className = "nav-link text-champagneGold-500 font-semibold py-1 border-b border-champagneGold-500";
+                } else {
+                    link.className = "nav-link text-slate-300 hover:text-champagneGold-500 transition-colors py-1";
+                }
+            });
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // RENDER HOME FEATURED
+        function renderFeaturedHomeProducts() {
+            const container = document.getElementById('home-featured-grid');
+            const featuredItems = products.slice(0, 4);
+            container.innerHTML = featuredItems.map(p => createCardHTML(p)).join('');
+            lucide.createIcons();
+        }
+
+        // RENDER SHOP CATALOG
+        function renderShopGrid() {
+            const container = document.getElementById('main-shop-grid');
+            const emptyState = document.getElementById('shop-empty-state');
+            const searchVal = document.getElementById('header-search-input').value.toLowerCase();
+
+            let filtered = products.filter(p => {
+                const matchCat = (currentActiveCategory === 'All') || (p.category === currentActiveCategory);
+                const matchSearch = p.name.toLowerCase().includes(searchVal) || 
+                                    p.model.toLowerCase().includes(searchVal) ||
+                                    p.description.toLowerCase().includes(searchVal);
+                return matchCat && matchSearch;
+            });
+
+            const sortOpt = document.getElementById('shop-sort').value;
+            if (sortOpt === 'low-high') filtered.sort((a,b) => a.price - b.price);
+            if (sortOpt === 'high-low') filtered.sort((a,b) => b.price - a.price);
+            if (sortOpt === 'rating') filtered.sort((a,b) => b.rating - a.rating);
+
+            if (filtered.length === 0) {
+                container.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            container.innerHTML = filtered.map(p => createCardHTML(p)).join('');
+            lucide.createIcons();
+        }
+
+        // CARD COMPONENT HTML
+        function createCardHTML(product) {
+            const isWishlisted = wishlist.has(product.id);
+            const waMsg = encodeURIComponent(`Hi RAS Hardware Peshawar, I would like to inquire about the ${product.name} (${product.model}).`);
+            
+            return `
+                <div class="ras-card bg-darkSlate border border-champagneGold-500/20 flex flex-col relative transition-all duration-300">
+                    
+                    <div class="product-img-box relative aspect-[4/3] bg-deepCharcoal overflow-hidden cursor-pointer" onclick="openProductDetailView(${product.id})">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover">
+                        
+                        <span class="absolute top-3 left-3 bg-deepCharcoal text-champagneGold-400 text-[9px] font-bold px-2.5 py-1 uppercase tracking-widest border border-champagneGold-500/30">${product.model}</span>
+
+                        <button onclick="event.stopPropagation(); toggleWishlist(${product.id})" class="absolute top-3 right-3 p-2 bg-deepCharcoal/80 hover:bg-deepCharcoal text-champagneGold-400 border border-champagneGold-500/20 rounded-full transition-colors">
+                            <i data-lucide="heart" class="w-4 h-4 ${isWishlisted ? 'fill-champagneGold-400 text-champagneGold-400' : ''}"></i>
+                        </button>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1">
+                            <span class="uppercase tracking-wider font-semibold text-champagneGold-400">${product.category}</span>
+                            <div class="flex items-center text-champagneGold-400 font-semibold gap-1">
+                                <i data-lucide="star" class="w-3 h-3 fill-champagneGold-400"></i>
+                                <span>${product.rating}</span>
+                            </div>
+                        </div>
+
+                        <h3 onclick="openProductDetailView(${product.id})" class="font-serif font-bold text-white text-base hover:text-champagneGold-400 transition-colors cursor-pointer line-clamp-1 mb-1">${product.name}</h3>
+                        <p class="text-[11px] text-slate-400 line-clamp-1 mb-4">${product.material}</p>
+
+                        <div class="pt-3 border-t border-champagneGold-500/20 mt-auto flex flex-col gap-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-serif font-bold text-lg text-champagneGold-400">PKR ${product.price.toLocaleString()}</span>
+                                <button onclick="openQuickView(${product.id})" class="text-[10px] font-bold uppercase tracking-wider text-slate-300 hover:text-champagneGold-400">Quick Specs</button>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="addToCart(${product.id})" class="btn-gold font-bold text-[11px] py-2 uppercase tracking-wider flex items-center justify-center gap-1">
+                                    <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add Cart
+                                </button>
+                                <a href="https://wa.me/923000000000?text=${waMsg}" target="_blank" rel="noopener" class="bg-emerald-700/80 hover:bg-emerald-600 text-white font-bold text-[11px] py-2 uppercase tracking-wider flex items-center justify-center gap-1 border border-emerald-500/40">
+                                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            `;
+        }
+
+        // CATEGORY FILTER
+        function filterCategory(cat) {
+            currentActiveCategory = cat;
+            document.getElementById('catalog-category-title').textContent = `${cat} Catalog`;
+
+            document.querySelectorAll('.shop-filter-btn').forEach(btn => {
+                if (btn.dataset.cat === cat) {
+                    btn.className = "shop-filter-btn active-filter px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider bg-champagneGold-500 text-deepCharcoal";
+                } else {
+                    btn.className = "shop-filter-btn px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-champagneGold-400";
+                }
+            });
+
+            renderShopGrid();
+        }
+
+        function setupSearchListeners() {
+            const handleSearch = () => {
+                if (document.getElementById('view-shop').classList.contains('hidden')) {
+                    navigateTo('shop');
+                }
+                renderShopGrid();
+            };
+
+            document.getElementById('header-search-input').addEventListener('input', handleSearch);
+            document.getElementById('mobile-search-input').addEventListener('input', (e) => {
+                document.getElementById('header-search-input').value = e.target.value;
+                handleSearch();
+            });
+        }
+
+        // PRODUCT DETAIL PAGE
+        function openProductDetailView(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const container = document.getElementById('product-detail-container');
+            const isWishlisted = wishlist.has(product.id);
+            const waMsg = encodeURIComponent(`Hi RAS Hardware Peshawar, I'm interested in buying ${product.name} (Model: ${product.model}).`);
+
+            container.innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-darkSlate p-8 sm:p-12 border border-champagneGold-500/30 shadow-2xl">
+                    <div class="bg-deepCharcoal border border-champagneGold-500/20 overflow-hidden">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <span class="text-champagneGold-400 text-xs font-bold uppercase tracking-[0.25em]">${product.category} • Model ${product.model}</span>
+                            <h1 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">${product.name}</h1>
+                        </div>
+
+                        <div class="flex items-center gap-4 border-y border-champagneGold-500/20 py-4">
+                            <span class="font-serif text-3xl font-bold text-champagneGold-400">PKR ${product.price.toLocaleString()}</span>
+                            <span class="bg-champagneGold-500/10 border border-champagneGold-500/30 text-champagneGold-400 text-[10px] font-bold uppercase px-3 py-1 ml-auto">Peshawar Stock Ready</span>
+                        </div>
+
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            ${product.description}
+                        </p>
+
+                        <!-- Specifications Grid -->
+                        <div class="grid grid-cols-2 gap-4 text-xs bg-deepCharcoal p-4 border border-champagneGold-500/20">
+                            <div>
+                                <span class="text-slate-400 block uppercase text-[10px]">Metallurgy</span>
+                                <span class="font-bold text-white">${product.material}</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 block uppercase text-[10px]">Surface Finish</span>
+                                <span class="font-bold text-white">${product.finish}</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 block uppercase text-[10px]">Testing Rating</span>
+                                <span class="font-bold text-white">${product.durability}</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 block uppercase text-[10px]">Warranty</span>
+                                <span class="font-bold text-champagneGold-400">Lifetime Mechanical</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                            <button onclick="addToCart(${product.id})" class="flex-grow btn-gold font-bold text-xs uppercase tracking-widest py-4 flex items-center justify-center gap-2 shadow-xl">
+                                <i data-lucide="shopping-bag" class="w-4 h-4"></i> Add To Cart
+                            </button>
+                            <a href="https://wa.me/923000000000?text=${waMsg}" target="_blank" rel="noopener" class="bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-widest py-4 px-6 flex items-center justify-center gap-2 border border-emerald-500/40">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Order
+                            </a>
+                            <button onclick="toggleWishlist(${product.id})" class="p-4 border border-champagneGold-500/30 hover:border-champagneGold-400 text-champagneGold-400 bg-deepCharcoal">
+                                <i data-lucide="heart" class="w-5 h-5 ${isWishlisted ? 'fill-champagneGold-400 text-champagneGold-400' : ''}"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            lucide.createIcons();
+            navigateTo('product-detail');
+        }
+
+        // CART MANAGEMENT
+        function addToCart(productId, qty = 1) {
+            const product = products.find(p => p.id === productId);
+            const existing = cart.find(item => item.id === productId);
+
+            if (existing) {
+                existing.quantity += qty;
+            } else {
+                cart.push({ ...product, quantity: qty });
+            }
+
+            updateCartUI();
+            showToast(`Added "${product.name}" to cart.`);
+        }
+
+        function updateQuantity(productId, change) {
+            const item = cart.find(i => i.id === productId);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(i => i.id !== productId);
+                }
+            }
+            updateCartUI();
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(i => i.id !== productId);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            document.getElementById('cart-badge').textContent = totalCount;
+            document.getElementById('cart-drawer-count').textContent = totalCount;
+            document.getElementById('header-cart-total').textContent = `PKR ${subtotal.toLocaleString()}`;
+            document.getElementById('cart-drawer-subtotal').textContent = `PKR ${subtotal.toLocaleString()}`;
+            document.getElementById('cart-drawer-total').textContent = `PKR ${subtotal.toLocaleString()}`;
+            document.getElementById('checkout-final-total').textContent = `PKR ${subtotal.toLocaleString()}`;
+
+            const container = document.getElementById('cart-drawer-items');
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-16">
+                        <i data-lucide="shopping-bag" class="w-12 h-12 text-slate-500 mx-auto mb-3"></i>
+                        <p class="text-xs text-slate-400">Your hardware cart is empty.</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = cart.map(item => `
+                    <div class="flex items-center gap-4 p-3 bg-deepCharcoal border border-champagneGold-500/20">
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover bg-darkSlate">
+                        <div class="flex-grow min-w-0">
+                            <h4 class="text-xs font-bold text-white truncate">${item.name}</h4>
+                            <p class="text-xs text-champagneGold-400 font-bold mt-0.5">PKR ${item.price.toLocaleString()}</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <button onclick="updateQuantity(${item.id}, -1)" class="w-5 h-5 bg-darkSlate border border-champagneGold-500/30 flex items-center justify-center text-xs font-bold text-white">-</button>
+                                <span class="text-xs font-bold text-white w-4 text-center">${item.quantity}</span>
+                                <button onclick="updateQuantity(${item.id}, 1)" class="w-5 h-5 bg-darkSlate border border-champagneGold-500/30 flex items-center justify-center text-xs font-bold text-white">+</button>
+                            </div>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-slate-500 hover:text-red-400">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+
+            lucide.createIcons();
+        }
+
+        function toggleCartDrawer(open) {
+            const overlay = document.getElementById('cart-drawer-overlay');
+            const drawer = document.getElementById('cart-drawer');
+            if (open) {
+                overlay.classList.remove('hidden');
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    drawer.classList.remove('translate-x-full');
+                }, 10);
+            } else {
+                drawer.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
+        // WISHLIST LOGIC
+        function toggleWishlist(productId) {
+            const product = products.find(p => p.id === productId);
+            if (wishlist.has(productId)) {
+                wishlist.delete(productId);
+                showToast("Removed from wishlist.");
+            } else {
+                wishlist.add(productId);
+                showToast(`Saved "${product.name}".`);
+            }
+
+            const count = wishlist.size;
+            const badge = document.getElementById('wishlist-badge');
+            badge.textContent = count;
+            if (count > 0) badge.classList.remove('hidden');
+            else badge.classList.add('hidden');
+
+            renderWishlistItems();
+            renderFeaturedHomeProducts();
+            renderShopGrid();
+        }
+
+        function renderWishlistItems() {
+            document.getElementById('wishlist-drawer-count').textContent = wishlist.size;
+            const container = document.getElementById('wishlist-drawer-items');
+
+            if (wishlist.size === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-16">
+                        <i data-lucide="heart" class="w-12 h-12 text-slate-500 mx-auto mb-3"></i>
+                        <p class="text-xs text-slate-400">No saved items in wishlist.</p>
+                    </div>
+                `;
+            } else {
+                const wishlistedProducts = products.filter(p => wishlist.has(p.id));
+                container.innerHTML = wishlistedProducts.map(item => `
+                    <div class="flex items-center gap-4 p-3 bg-deepCharcoal border border-champagneGold-500/20">
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover bg-darkSlate">
+                        <div class="flex-grow min-w-0">
+                            <h4 class="text-xs font-bold text-white truncate">${item.name}</h4>
+                            <p class="text-xs text-champagneGold-400 font-bold mt-0.5">PKR ${item.price.toLocaleString()}</p>
+                            <button onclick="addToCart(${item.id}); toggleWishlist(${item.id})" class="mt-2 text-[10px] font-bold uppercase tracking-wider text-champagneGold-400 border-b border-champagneGold-500">Move to Cart</button>
+                        </div>
+                        <button onclick="toggleWishlist(${item.id})" class="text-slate-500 hover:text-red-400">
+                            <i data-lucide="x" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+            lucide.createIcons();
+        }
+
+        function toggleWishlistDrawer(open) {
+            const overlay = document.getElementById('wishlist-drawer-overlay');
+            const drawer = document.getElementById('wishlist-drawer');
+            if (open) {
+                renderWishlistItems();
+                overlay.classList.remove('hidden');
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    drawer.classList.remove('translate-x-full');
+                }, 10);
+            } else {
+                drawer.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
+        // QUICK VIEW MODAL
+        function openQuickView(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const modal = document.getElementById('quick-view-modal');
+            const content = document.getElementById('quick-view-content');
+            const body = document.getElementById('quick-view-body');
+
+            body.innerHTML = `
+                <div class="bg-deepCharcoal aspect-square">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-champagneGold-400 text-xs font-bold uppercase tracking-widest">${product.category} • ${product.model}</span>
+                        <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-2">${product.name}</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-6">${product.description}</p>
+                        
+                        <div class="space-y-2 text-xs text-slate-400 border-t border-champagneGold-500/20 pt-4">
+                            <p><strong class="text-white">Material:</strong> ${product.material}</p>
+                            <p><strong class="text-white">Finish:</strong> ${product.finish}</p>
+                            <p><strong class="text-white">Testing Standard:</strong> ${product.durability}</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-champagneGold-500/20 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="font-serif text-2xl font-bold text-champagneGold-400">PKR ${product.price.toLocaleString()}</span>
+                            <span class="text-[10px] text-champagneGold-400 border border-champagneGold-500/30 px-2.5 py-1 font-bold uppercase">Lifetime Mechanical Warranty</span>
+                        </div>
+                        <button onclick="addToCart(${product.id}); closeQuickViewModal()" class="w-full btn-gold font-bold text-xs uppercase tracking-widest py-3.5 shadow-xl">
+                            Add To Hardware Cart
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                content.classList.remove('scale-95');
+            }, 10);
+            lucide.createIcons();
+        }
+
+        function closeQuickViewModal() {
+            const modal = document.getElementById('quick-view-modal');
+            const content = document.getElementById('quick-view-content');
+            modal.classList.add('opacity-0');
+            content.classList.add('scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        // CHECKOUT FLOW
+        function openCheckoutModal() {
+            if (cart.length === 0) {
+                showToast("Your cart is empty.");
+                return;
+            }
+            toggleCartDrawer(false);
+            const modal = document.getElementById('checkout-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.remove('opacity-0'), 10);
+        }
+
+        function closeCheckoutModal() {
+            const modal = document.getElementById('checkout-modal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        function handleCheckoutSubmit(e) {
+            e.preventDefault();
+            cart = [];
+            updateCartUI();
+            closeCheckoutModal();
+            showToast("🎉 Order Confirmed! RAS Hardware Order #RAS-2026-88 is being processed.");
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            showToast("Wholesale inquiry submitted successfully.");
+            e.target.reset();
+        }
+
+        function handleNewsletter(e) {
+            e.preventDefault();
+            showToast("Subscribed to RAS Hardware trade updates.");
+            e.target.reset();
+        }
+
+        // TOAST ENGINE
+        function showToast(msg) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = "bg-deepCharcoal text-white px-4 py-3 border border-champagneGold-500/40 text-xs font-semibold uppercase tracking-wider flex items-center gap-3 shadow-2xl transition-all duration-300 pointer-events-auto";
+            toast.innerHTML = `
+                <i data-lucide="shield-check" class="w-4 h-4 text-champagneGold-400"></i>
+                <span>${msg}</span>
+            `;
+            container.appendChild(toast);
+            lucide.createIcons();
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
